@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #bccccb;
+}
+.container{
+    background-color: rgb(86, 95, 95);
+    padding: 20px;
+    max-width: 500px;
+    color: #ffffff;
+    border-radius: 10px;
+}
+header h1{
+    font-size: 32px;
+    text-decoration: underline;
+}
+.inputs{
+    margin-top: 30px;
+    position: relative;
+}
+.inputs label{
+    background-color: #ffffff;
+    color: rgb(86, 95, 95);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    padding: 8px 5px;
+}
+.inputs button{
+    background-color: #bccccb;
+    outline: none;
+    border: none;
+    padding: 8px 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgb(86, 95, 95);
+    font-size: 16px;
+}
+.inputs button:before{
+    content: "copied";
+    position:absolute;
+    transform: translate(0,0);
+    background-color: rgb(55, 187, 55);
+    right: 23px;
+    border-radius: 10px;
+    padding: 5px 8px;
+    color: #ffffff;
+    display: none;
+}
+.inputs button.active::before {
+    display: block;
+    transform: translate(0,-50px);
+    transition-delay: 500ms;
+}
